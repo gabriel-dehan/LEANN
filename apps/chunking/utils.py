@@ -15,11 +15,11 @@ logger = logging.getLogger(__name__)
 CODE_EXTENSIONS = {
     ".py": "python",
     ".java": "java", 
-    ".cs": "c_sharp",
+    ".cs": "csharp",  # Fixed: astchunk expects "csharp" not "c_sharp"
     ".ts": "typescript",
     ".tsx": "typescript",
-    ".js": "javascript",
-    ".jsx": "javascript"
+    ".js": "typescript",  # Fixed: Use TypeScript parser for JavaScript (TS is superset of JS)
+    ".jsx": "typescript"  # Fixed: Use TypeScript parser for JSX
 }
 
 # Default chunk parameters for different content types
